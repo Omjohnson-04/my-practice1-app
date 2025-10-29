@@ -3,6 +3,8 @@ import ProductList from "./components/ProductList";
 import ParentComponent from "./components/ParentComponent";
 import ParentWithCallback from "./components/ParentWithCallback";
 import Counter from "./components/Counter";
+import LoginForm from "./components/LoginForm";
+import "./globals.css";
 
 export default function Home() {
   return (
@@ -20,6 +22,8 @@ export default function Home() {
     /*<div>
       <Counter />
     </div>*/
-
+    <div>
+      <LoginForm />
+    </div>
   );
 }

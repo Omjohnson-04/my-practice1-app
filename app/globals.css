@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-:root {
+/*:root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -23,4 +23,125 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}*/
+
+/* ---------- Reset & Base ---------- 
+*, *::before, *::after { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background: var(--bg);
+  color: var(--text);
+  display: grid;
+  place-items: center;        /* center the <div><LoginForm/></div> 
+  padding: 24px;
 }
+
+/* ---------- Design Tokens (Dark default) ---------- 
+:root{
+  --bg: #0b1016;
+  --panel: #111927;
+  --panel-2: #0f1622;
+  --text: #e7eef8;
+  --muted:#90a0b7;
+  --primary:#4da3ff;
+  --primary-600:#2f87eb;
+  --border:#223044;
+  --danger:#ff6b6b;
+  --ring: 0 0 0 3px rgba(77,163,255,.35);
+  --shadow: 0 12px 30px rgba(0,0,0,.35);
+  --radius: 14px;
+  --input-h: 46px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root{
+    --bg: #f6f9fc;
+    --panel: #ffffff;
+    --panel-2:#f1f5fb;
+    --text:#0e1621;
+    --muted:#5a6b85;
+    --primary:#1f6feb;
+    --primary-600:#185ac4;
+    --border:#e6ecf3;
+    --danger:#d74444;
+    --ring: 0 0 0 3px rgba(31,111,235,.25);
+    --shadow: 0 12px 30px rgba(12,24,41,.10);
+  }
+}
+
+/* ---------- Page wrapper (the <div> in page.js) ---------- 
+body > div {
+  width: min(92vw, 420px);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: clamp(20px, 4vw, 32px);
+}
+
+/* ---------- Form & elements (matches your JSX exactly) ---------- 
+form {
+  display: grid;
+  gap: 18px;
+}
+
+form > label {
+  display: grid;
+  gap: 8px;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+form > label > input {
+  height: var(--input-h);
+  padding: 0 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--panel-2);
+  color: var(--text);
+  outline: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+form > label > input::placeholder { color: color-mix(in oklab, var(--muted), transparent 35%); }
+
+form > label > input:focus {
+  border-color: var(--primary);
+  box-shadow: var(--ring);
+  background: color-mix(in oklab, var(--panel-2), white 3%);
+}
+
+/* ---------- Button ---------- 
+button[type="submit"] {
+  height: 48px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 120ms ease, background 160ms ease, box-shadow 160ms ease;
+  box-shadow: 0 10px 22px rgba(77,163,255,.25);
+}
+
+button[type="submit"]:hover { background: var(--primary-600); }
+button[type="submit"]:active { transform: translateY(1px); }
+button[disabled] { opacity: .6; cursor: not-allowed; }
+
+/* ---------- Nice optional text styles ---------- 
+h1, h2, h3 { margin: 0 0 8px; }
+p { color: var(--muted); margin: 0; }
+
+/* ---------- Accessibility helpers (optional) ---------- 
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+*/
+
